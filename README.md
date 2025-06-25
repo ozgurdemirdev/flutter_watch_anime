@@ -1,3 +1,14 @@
-# animecx
+# 🎥 flutter_watch_anime
 
-A new Flutter project.
+Sadece **Windows** için geliştirilmiş bu Flutter projesi, anime izleme deneyimini otomatikleştirerek kullanıcıya zahmetsiz bir akış sunar.
+
+## ✨ Özellikler
+
+- ⏩ **Opening Atlama:** Her bölümün başında belirlenen saniye kadar otomatik atlama yapılır.
+- ⏭️ **Otomatik Bölüm Geçişi:** Outro başladığında bir sonraki bölüme otomatik geçilir.
+- 🖼️ **Ekran Takibi:** Uygulama, videonun sol üst köşesini düzenli olarak takip eder ve geçiş kararlarını buna göre verir.
+
+## 🖥️ Platform
+
+- ✅ Sadece **Windows** için geliştirilmiştir.
+- ❌ Mobil veya diğer masaüstü platformlar şu an desteklenmemektedir.
