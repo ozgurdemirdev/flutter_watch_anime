@@ -1,4 +1,4 @@
-# 🎥 flutter_watch_anime
+# 🎥 Flutter Otomatik Anime İzleme
 
 Sadece **Windows** için geliştirilmiş bu Flutter projesi, anime izleme deneyimini otomatikleştirerek kullanıcıya zahmetsiz bir akış sunar.
 
