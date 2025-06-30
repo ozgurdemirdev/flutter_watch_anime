@@ -1,6 +1,7 @@
 # 🎥 Flutter Otomatik Anime İzleme
 
-! Uygulamanın çalışması için dll gereklidir dll klasörünü kontrol etmeyi unutmayın
+❗ **DİKKAT:** Uygulamanın çalışması için DLL dosyaları gereklidir.  
+👉 Lütfen başlamadan önce `/dll` klasörünü kontrol edin!
 
 Sadece **Windows** için geliştirilmiş bu Flutter projesi, anime izleme deneyimini otomatikleştirerek kullanıcıya zahmetsiz bir akış sunar.
 
