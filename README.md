@@ -1,4 +1,3 @@
-@@ -0,0 +1,45 @@
 # 🧩 DLL Kaynak Kodları ve Derlenmiş Dosyalar
 
 Bu klasör, uygulamanın kullandığı DLL dosyalarının kaynak kodlarını ve derlenmiş hallerini içerir.
