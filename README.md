@@ -22,4 +22,5 @@ Aşağıdaki videoda, anime izlerken intro ve outro geçişlerini otomatik atlay
 - 🖼️ **Ekran Takibi:** Videonun sol üst köşesi düzenli olarak izlenir ve geçiş kararları buna göre verilir.
 
 ## 🖥️ Platform
-- ✅ Sa
+- ✅ Sadece **Windows** platformunda çalışır.  
+- ❌ Mobil veya diğer masaüstü platformları şu anda desteklenmemektedir.
