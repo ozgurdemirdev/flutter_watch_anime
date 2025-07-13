@@ -1,45 +1,15 @@
-# 🧩 DLL Kaynak Kodları ve Derlenmiş Dosyalar
+# 🎥 Flutter Otomatik Anime İzleme
 
-Bu klasör, uygulamanın kullandığı DLL dosyalarının kaynak kodlarını ve derlenmiş hallerini içerir.
+! Uygulamanın çalışması için dll gereklidir dll klasörünü kontrol etmeyi unutmayın
+❗ **DİKKAT:** Uygulamanın çalışması için DLL dosyaları gereklidir.  
+👉 Lütfen başlamadan önce `/dll` klasörünü kontrol edin!
 
----
+Sadece **Windows** için geliştirilmiş bu Flutter projesi, anime izleme deneyimini otomatikleştirerek kullanıcıya zahmetsiz bir akış sunar.
 
-## 📁 getScreenShoot.dll
-
-### Açıklama:
-- Ekranın belirli bir bölgesinden ekran görüntüsü alır.
-- Videonun geçiş noktalarını belirlemede kullanılır.
-
-### Yol:
-- Kaynak kod: `getScreenShoot/`
-- Derlenmiş DLL: `getScreenShoot.dll`
-
----
-
-## 📁 OpenCVWrapper.dll
-
-### Açıklama:
-- OpenCV kullanarak görüntü işleme işlevlerini dışa aktarır.
-- Örneğin: iki görüntü arasındaki farkı hesaplama, maskeleme, karşılaştırma gibi işlemler.
-
-### Yol:
-- Kaynak kod: `OpenCVWrapper/`
-- Derlenmiş DLL: `OpenCVWrapper.dll`
-
----
-
-## 🧱 Bağımlılıklar
-
-Her iki DLL de aşağıdaki OpenCV runtime dosyasına ihtiyaç duyar:
-
-Release sürümü için:
-- `opencv_world4110.dll` (OpenCV 4.1.1)
-> build>windows>x64>runner>Release 
-
-Debug sürümü için:
-- `opencv_world4110d.dll` (OpenCV 4.1.1)
-
-> build>windows>x64>runner>Debug 
-
-
-Bu DLL’leri uygulamayı çalıştırmadan gereken konumlara 1'er kopyasını eklemeyi unutmayın.
+## ✨ Özellikler
+- ⏩ **Opening Atlama:** Her bölümün başında belirlenen saniye kadar otomatik atlama yapılır.
+- ⏭️ **Otomatik Bölüm Geçişi:** Outro başladığında bir sonraki bölüme otomatik geçilir.
+- 🖼️ **Ekran Takibi:** Uygulama, videonun sol üst köşesini düzenli olarak takip eder ve geçiş kararlarını buna göre verir.
+## 🖥️ Platform
+- ✅ Sadece **Windows** için geliştirilmiştir.
+- ❌ Mobil veya diğer masaüstü platformlar şu an desteklenmemektedir.
