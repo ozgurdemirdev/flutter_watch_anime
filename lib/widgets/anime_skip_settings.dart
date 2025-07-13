@@ -170,7 +170,8 @@ class SkipEntryWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text('Süre (sn): '),
                     SizedBox(
@@ -185,18 +186,23 @@ class SkipEntryWidget extends StatelessWidget {
                       ),
                     ),
                     if (showMinute) ...[
-                      const SizedBox(width: 16),
-                      const Text('Dakikadan sonra ara: '),
-                      SizedBox(
-                        width: 40,
-                        child: TextFormField(
-                          initialValue: (entry.minute ?? 0).toString(),
-                          keyboardType: TextInputType.number,
-                          onChanged: (v) {
-                            entry.minute = int.tryParse(v) ?? 0;
-                            if (onChanged != null) onChanged!();
-                          },
-                        ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const SizedBox(height: 15),
+                          const Text('Dakikadan Sonra Ara'),
+                          SizedBox(
+                            width: 40,
+                            child: TextFormField(
+                              initialValue: (entry.minute ?? 0).toString(),
+                              keyboardType: TextInputType.number,
+                              onChanged: (v) {
+                                entry.minute = int.tryParse(v) ?? 0;
+                                if (onChanged != null) onChanged!();
+                              },
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ],

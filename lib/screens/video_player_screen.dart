@@ -60,7 +60,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
       _showAddAnimeButton = false;
       _showStartWatchingButton = false;
       _showBackButton = false;
-      _currentUrl = 'https://anm.cx/browse';
+      _currentUrl = 'https://animecix.tv/browse';
       _mp4Link = null;
       _isLoading = false;
       _loadingSteps.clear();
@@ -85,7 +85,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
   }
 
   void _parseAnimeInfo(String url) {
-    final reg = RegExp(r'anm\.cx\/titles\/(\d+)\/([^\/]+)');
+    final reg = RegExp(r'animecix\.tv\/titles\/(\d+)\/([^\/]+)');
     final match = reg.firstMatch(url);
     if (match != null) {
       _currentAnimeKey = match.group(1);
@@ -102,8 +102,8 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
 
   void _parseAnimeInfoFromTitle(String? title) async {
     if (title == null) return;
-    if (title.startsWith('anm.cx/titles/')) {
-      final reg = RegExp(r'anm\.cx\/titles\/(\d+)\/([^\/]+)');
+    if (title.startsWith('animecix.tv/titles/')) {
+      final reg = RegExp(r'animecix\.tv\/titles\/(\d+)\/([^\/]+)');
       final match = reg.firstMatch(title);
       if (match != null) {
         _currentAnimeKey = match.group(1);
@@ -211,7 +211,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
       return;
     }
     final firstEpisodeUrl =
-        'https://anm.cx/titles/${_currentAnimeKey!}/${_currentAnimeLink!}/season/1/episode/1';
+        'https://animecix.tv/titles/${_currentAnimeKey!}/${_currentAnimeLink!}/season/1/episode/1';
     await addAnimeToList(
         _currentAnimeKey!, _currentAnimeName ?? '', firstEpisodeUrl);
     setState(() {
@@ -231,7 +231,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
         lastUrl == "clicked" ||
         lastUrl == "not found") {
       lastUrl =
-          'https://anm.cx/titles/${_currentAnimeKey!}/${_currentAnimeLink!}/season/1/episode/1';
+          'https://animecix.tv/titles/${_currentAnimeKey!}/${_currentAnimeLink!}/season/1/episode/1';
       await setAnimeLastUrl(_currentAnimeKey!, lastUrl);
     }
     await _loadAndPlayVideoWithResult(lastUrl, false);
@@ -312,7 +312,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
         print("MyUrl : $url");
 
         print("Delay:" + _notFoundDelaySeconds.toString());
-        if (uri?.host == "anm.cx") {
+        if (uri?.host == "animecix.tv") {
           setState(() {
             _loadingProgress = 0.3;
             _loadingSteps.add('Sayfa yükleniyor: ${uri?.toString()}');
@@ -575,7 +575,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
             _loadingSteps.clear();
             _loadingProgress = 0.0;
             _invisibleWebView = null;
-            _currentUrl = 'https://anm.cx/browse';
+            _currentUrl = 'https://animecix.tv/browse';
           });
         },
         onVideoEnd: (bool? isNext) async {
@@ -625,7 +625,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
       body: Stack(
         children: [
           AnimeWebView(
-            initialUrl: _currentUrl ?? 'https://anm.cx/browse',
+            initialUrl: _currentUrl ?? 'https://animecix.tv/browse',
             onWebViewCreated: (controller) {
               _webViewController = controller;
             },
